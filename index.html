@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>HeuClue.</h1>
+    </header>
+    <p class="special">Click A Button To Correctly Guess The Color in The Box</p>
+    <section class="main">
+    <div class="main-header">
+    <div data-testid="colorBox" id="displayBtn"></div>
+    <h3>SCORE: <span id="score" data-testid="score">0</span></h3>
+    </div>
+    <div class="btns">
+        <button id="redBtn" data-testid="colorOption"></button>
+        <button id="blueBtn" data-testid="colorOption"></button>
+        <button id="greenBtn" data-testid="colorOption"></button>
+        <button id="yellowBtn" data-testid="colorOption"></button>
+        <button id="purpleBtn" data-testid="colorOption"></button>
+        <button id="orangeBtn" data-testid="colorOption"></button>
+    </div>
+    <p id="gameStatus" data-testid="gameStatus"></p>
+    <button id="newGameButton" data-testid="newGameButton">New Game</button>
+    </section>
+</body>
+</html>
