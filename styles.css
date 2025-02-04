@@ -1,5 +1,5 @@
 :root {
-    --deep-space-blue: #1B3A57;
+    --deep-space-blue: #5387b9;
     --electric-teal: #00B4B4;
     --muted-coral: #FF6F61;
     --soft-cream: #F5F5F5;
@@ -7,15 +7,18 @@
 }
 
 body {
-    background-image: linear-gradient(4deg, #1B3A57, #dda39d);
+    background-image: linear-gradient(4deg, #7a7575, #070720);
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 header {
     font-family: 'Lobster';
     color: var(--deep-space-blue);
+    text-decoration: underline;
+    padding-left: 10px;
 }
 
 .special {
@@ -26,15 +29,15 @@ header {
 
 .main {
     background-color: white;
-    width: 500px;
-    height: 500px;
+    width: 80%; 
+    max-width: 500px; 
     margin: auto;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .main-header {
-    padding: 40px 0 0 0;
-    /* border: 1px solid red; */
+    padding: 20px 0 0 0;
 }
 
 #displayBtn {
@@ -47,14 +50,14 @@ header {
 }
 
 .main h3 {
-    padding: 30px 14px ;
+    padding: 20px 14px;
 }
 
 .btns {
     margin: auto;
-    width: 80%;
+    width: 100%; /* Full width of the container */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 buttons per row */
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -66,6 +69,7 @@ header {
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    font-size: 16px;
 }
 
 #newGameButton {
@@ -76,7 +80,52 @@ header {
     align-items: center;
     padding: 10px 8px;
     border-radius: 4px;
-    border: 1px solid gray;
-    background-color: #1B3A57;
+    border: none;
+    background-color: var(--deep-space-blue);
     color: white;
+    cursor: pointer;
+}
+
+#gameStatus {
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .main {
+        width: 90%; /* Decrease width for tablets */
+    }
+
+    .btns {
+        grid-template-columns: 1fr 1fr; /* 2 buttons per row on tablets */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .main {
+        width: 85%; /* Further reduce width for mobile */
+        padding: 15px;
+    }
+
+    .main-header {
+        padding: 20px 0 0 0;
+    }
+
+    .special {
+        padding: 20px 14px;
+        text-align: center;
+    }
+
+    .btns {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .btns button {
+        padding: 35px 15px; 
+
+    }
 }
